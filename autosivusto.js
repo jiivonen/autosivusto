@@ -8,6 +8,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'sivupohjat'));
 
+app.use('/inc', express.static('includes'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
