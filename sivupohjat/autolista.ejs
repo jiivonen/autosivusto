@@ -1,0 +1,22 @@
+<%- include('header'); %>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Merkki ja malli</th>
+        <th>Vuosimalli</th>
+        <th>Omistaja</th>
+    </tr>
+    <!-- tähän tulevat autojen tiedot-->
+    <% for (let auto of autot) { %>
+        <tr>
+            <td><%= auto.id %></td>
+            <td><%= auto.merkki %> <%= auto.malli %></td>
+            <td><%= auto.vuosimalli %></td>
+            <td><%= auto.omistaja %></td>
+        </tr>
+    <% } %>
+</table>
+<%= lukumaara %>
+
+<%- include('footer'); %>
